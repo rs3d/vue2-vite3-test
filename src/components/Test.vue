@@ -1,46 +1,31 @@
 <script lang="ts">
-import { Component, Vue, Mixins } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
+
+// 1. Comment the comment below
+export interface DeleteThisInterface {}
 
 @Component
-export default class Test extends Mixins() {
-  get default() {
-    return 1;
-  }
-  // default
-  defaultModel = {
-    test: 'x',
-
-  }
-
-  private defaults = {
-    key: 'value',
-  }
-  
-  created() {
-    this.defaultModel.test = this.defaults.key;
-  }
+export default class Test extends Vue {
+  // 2. OR DELETE the comment below
+  // defaults = 1
 }
 </script>
 
 <template>
   <div class="example">
-    <p>
-      BUG?
-      <pre>{{ defaults }}</pre>
-      <pre>{{ defaultModel }}</pre>
-      
-      <code>components/Test.vue</code> to test hot module replacement.
-    </p>
-  <hr />  
+    <p>See file comments in <code>src/components/Test.vue</code></p>
   </div>
-  
 </template>
 
 <style lang="scss" scoped>
-  .example {
-    border: 1px solid red;
-    padding: 1rem;
-    border-radius: 1rem;
-    text-align: left;
-  }
+.example {
+  border: 1px solid red;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+code {
+  background: #eee;
+  padding: 5px;
+}
 </style>
