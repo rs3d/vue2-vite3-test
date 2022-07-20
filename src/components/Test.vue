@@ -7,7 +7,7 @@ export interface DeleteThisInterface {}
 @Component
 export default class Test extends Vue {
   // 2. OR DELETE the comment below
-  // defaults = 1
+  // defaultXXX = 1
 }
 </script>
 
